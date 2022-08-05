@@ -14,7 +14,7 @@ function App() {
   const connectWalletHandler = async () => {
     
     if (!ethereum) {
-      toast.warning("⚠️ Please install Metamask!!", {
+      toast.warning("Please install Metamask!!", {
         position: "bottom-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -46,7 +46,7 @@ function App() {
           }
         }
       } catch (err) {
-        toast.error("❌ An error occured!", {
+        toast.error("An error occured!", {
           position: "bottom-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -81,7 +81,7 @@ function App() {
               progress: undefined,
             });
           }).catch ((e:any)=>{
-            toast.error("❌ Transaction Failed!", {
+            toast.error("Transaction Failed!", {
               position: "bottom-right",
               autoClose: 5000,
               hideProgressBar: false,
@@ -94,7 +94,7 @@ function App() {
         )
       }
        else {
-        toast.error('❌ Ethereum object does not exist!', {
+        toast.error('Ethereum object does not exist!', {
           position: "bottom-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -130,7 +130,7 @@ function App() {
             onClick={mintNftHandler}
             className="bg-green-400 text-white px-4 py-2 -top-10 font-semibold"
           >
-            Mint now
+            Claim Rewards
           </button>
         ) : (
           <button
