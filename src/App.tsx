@@ -5,7 +5,7 @@ import { Maybe } from "@metamask/providers/dist/utils";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
-const contractAddr = "0x7084872B8a8a7eE0748aedFcDACaf67C7FcdbA20";
+const contractAddr = "0x3739100c7Fcc8a06b0eaC29Af9bc39819263ED09";
 
 function App() {
   const [currentAccount, setCurrentAccount] = useState<string | null>(null);
@@ -122,7 +122,7 @@ function App() {
     <>
       <div className="bg-black w-full h-screen flex flex-col items-center justify-center space-y-4">
         <h1 className="font-bold text-white text-xl text-center -top-10">
-          Click button to mint
+          Click button to {currentAccount ? 'claim reward' : 'connect wallet'}
         </h1>
 
         {currentAccount ? (
